@@ -1,11 +1,22 @@
 <html>
-    <head>
-        <title>Dr Smart.info</title>
-    </head>
-    <body>
-        <h1>Dr Smart.info</h1>
-            <h2>Rugby ratings</h2>
-                <p>Hi there!</p>
-                <p>It works!</p>
-    </body>
+  <head>
+    <title>Dr Smart.info</title>
+  </head>
+  <body>
+    <div>
+      <h1>Dr Smart.info</h1>
+        <h2>Rugby ratings</h2>
+          <p>Hi there!</p>
+          <p>It works!</p>
+    </div>
+    <div>
+      {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h3><a href="">{{ post.title }}</a></h3>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </body>
 </html>
